@@ -8,7 +8,7 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blue,
+        // color: Colors.blue,
         height: double.infinity,
         child: Column(children: [
           ChatListAppBar(),
