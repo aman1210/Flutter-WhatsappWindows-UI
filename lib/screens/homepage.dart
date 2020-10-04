@@ -1,4 +1,5 @@
 import 'package:experiment/screens/chatList.dart';
+import 'package:experiment/screens/mainChat.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -20,15 +21,19 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Row(
         children: [
           Container(
+            decoration: BoxDecoration(
+                border: Border(
+                    right: BorderSide(width: 1, color: Colors.grey[300]))),
             height: double.infinity,
             width: contactWidth,
-            color: Colors.blue,
+            // color: Colors.blue,
             child: ChatList(),
           ),
           Container(
             height: double.infinity,
             width: chatWidth,
-            color: Colors.red,
+            color: Colors.grey[900],
+            child: MainChat(),
           )
         ],
       ),

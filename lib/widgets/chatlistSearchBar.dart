@@ -28,7 +28,7 @@ class _ChatListSearchBarState extends State<ChatListSearchBar> {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      color: Colors.yellow,
+      color: Colors.grey[100],
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Padding(

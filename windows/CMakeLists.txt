@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(experiment LANGUAGES CXX)
+project(Flutter_WhatsappWindows_UI LANGUAGES CXX)
 
-set(BINARY_NAME "experiment")
+set(BINARY_NAME "Flutter_WhatsappWindows_UI")
 
 cmake_policy(SET CMP0063 NEW)
 

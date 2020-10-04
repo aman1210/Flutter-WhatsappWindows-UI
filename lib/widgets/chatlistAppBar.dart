@@ -13,13 +13,18 @@ class ChatListAppBar extends StatelessWidget {
     var userIcon = Padding(
       padding: const EdgeInsets.only(left: 16.0),
       child: CircleAvatar(
-        child: Icon(Icons.person),
-        backgroundColor: Colors.grey[200],
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(60),
+          child: Image.network(
+            "https://lh6.googleusercontent.com/-KCrst8xYQWY/AAAAAAAAAAI/AAAAAAAAACA/brZlv_HG_GM/s96-c/photo.jpg",
+          ),
+        ),
+        backgroundColor: Colors.black,
       ),
     );
     return Container(
       height: 60,
-      color: Colors.green,
+      color: Colors.grey[200],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

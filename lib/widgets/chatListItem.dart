@@ -23,48 +23,55 @@ class ChatListItem extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Column(
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom:
+                              BorderSide(width: 1, color: Colors.grey[200]))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Person name $index',
+                              style: TextStyle(fontSize: 17),
+                            ),
+                            Text('Last text msg'),
+                          ],
+                        ),
+                      ),
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Person name $index',
-                            style: TextStyle(fontSize: 17),
-                          ),
-                          Text('Last text msg'),
-                        ],
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          DateFormat.jm().format(
-                            DateTime.now(),
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(2),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Colors.grey),
-                          child: Transform.rotate(
-                            angle: math.pi / 4,
-                            child: Icon(
-                              Icons.push_pin,
-                              size: 16,
+                            DateFormat.jm().format(
+                              DateTime.now(),
                             ),
                           ),
-                        )
-                      ],
-                    )
-                  ],
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[400]),
+                            child: Transform.rotate(
+                              angle: math.pi / 4,
+                              child: Icon(
+                                Icons.push_pin,
+                                size: 12,
+                                color: Colors.white,
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
